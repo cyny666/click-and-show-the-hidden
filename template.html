@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>题目和答案</title>
+    <style>
+        .answer {
+            display: none;
+            color: #fc0b0b;
+        }
+        .toggle {
+            display: inline;
+            cursor: pointer;
+            border: 1px solid black; /* 添加边框 */
+        }
+        .title {
+            color: blue; /* 设置题目字体颜色为蓝色 */
+        }
+    </style>
+    <script>
+        function toggleAnswer(element) {
+            var answerElement = element.previousElementSibling;
+            var computedStyle = window.getComputedStyle(answerElement);
+            if (computedStyle.display === "none") {
+                answerElement.style.display = "block";
+            } else {
+                answerElement.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+
+{% for i in n %}
+<div class="question">
+    <p class="title">{{ title[i] }}</p>
+    <h3>答案：</h3>
+    <p class="answer">{{ answer[i] }}</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+{% endfor %}
+
+</body>
+</html>

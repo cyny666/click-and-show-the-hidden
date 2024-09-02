@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>题目和答案</title>
+    <style>
+        .answer {
+            display: none;
+            color: #fc0b0b;
+        }
+        .toggle {
+            display: inline;
+            cursor: pointer;
+            border: 1px solid black; /* 添加边框 */
+        }
+        .title {
+            color: blue; /* 设置题目字体颜色为蓝色 */
+        }
+    </style>
+    <script>
+        function toggleAnswer(element) {
+            var answerElement = element.previousElementSibling;
+            var computedStyle = window.getComputedStyle(answerElement);
+            if (computedStyle.display === "none") {
+                answerElement.style.display = "block";
+            } else {
+                answerElement.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+
+
+<div class="question">
+    <p class="title">题目</p>
+    <h3>答案：</h3>
+    <p class="answer">答案</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title">用户程序运行在__，而操作系统代码运行在__</p>
+    <h3>答案：</h3>
+    <p class="answer"> 用户模式、内核模式</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title"> 作为用户态代码和系统内核的交互接口，将用户态代码调用的API函数映射到相应的一个或多个Windows内部的系统服务调用的模块是__</p>
+    <h3>答案：</h3>
+    <p class="answer"> 核心子系统DLL</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title"> 本地安全授权子系统的进程是__</p>
+    <h3>答案：</h3>
+    <p class="answer">Lsass.exe</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title"> ____接收应用程序的请求后，创建相应的IRP</p>
+    <h3>答案：</h3>
+    <p class="answer">输入输出管理器</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title"> _______对应于OSI的链路层</p>
+    <h3>答案：</h3>
+    <p class="answer"> NDIS库及小端口驱动程序</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title"> 看到这些函数UnmapViewOfSection、VirtualAllocEx、WriteProcessMemory、SetThreadContext、ResumeThread就知道是___的进程隐藏攻击</p>
+    <h3>答案：</h3>
+    <p class="answer"> 进程内存替换</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title"> 修改控制器CR0，将wp位设置为0，是为了攻破___</p>
+    <h3>答案：</h3>
+    <p class="answer">系统内核写保护</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title">挂钩NewZwQuerySystemInformation函数的攻击是___</p>
+    <h3>答案：</h3>
+    <p class="answer">SSDT HOOK</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title">Inline Hook（内联挂钩）技术，查找目标函数在内存空间中的地址，更改函数的前5个字节为 __</p>
+    <h3>答案：</h3>
+    <p class="answer"> jmp <addr></p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title">通过___技术定位内存中的进程链表，匹配隐藏进程的结点，断链隐藏之。 </p>
+    <h3>答案：</h3>
+    <p class="answer"> DKOM</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title">在开机时比Windows内核更早加载，实现内核劫持的技术，称之为___ </p>
+    <h3>答案：</h3>
+    <p class="answer"> Bootkit</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title"> Bootkit技术___</p>
+    <h3>答案：</h3>
+    <p class="answer"> 在实模式下挂钩BIOS磁盘读写中断（INT 13h）函数</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title">可以检测rootkit的工具</p>
+    <h3>答案：</h3>
+    <p class="answer">XueTr（XT） PowerTool（PTRootkitUnhooker（RKU Kaspersky TDSSKillerIcesword（冰刃）、Wsyscheck、DarkSpy、RootkitRevealer等</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title">想要检测从网站上下载下来的文件是否有木马程序，可以使用</p>
+    <h3>答案：</h3>
+    <p class="answer">Autoruns</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title">在从代码中提取敏感字符串前，必须要___</p>
+    <h3>答案：</h3>
+    <p class="answer">加壳识别及脱壳</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title"> DEP机制体现了___</p>
+    <h3>答案：</h3>
+    <p class="answer"> 数据代码分离原则</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title">在加载程序到内存空间时随机化各个模块的起始加载地址的机制是 </p>
+    <h3>答案：</h3>
+    <p class="answer">ASLR</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title">Windows NT在《TCSEC橘皮书》中的等级为 </p>
+    <h3>答案：</h3>
+    <p class="answer">C2</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title">C2级别的安全性需要包括</p>
+    <h3>答案：</h3>
+    <p class="answer"> 安全的登录设施、自主的访问控制、安全审计、对象重用保护</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title">___是Windows 执行体ntoskrnl.exe（ 内 核态 ）的一个组件，负责执行对象的访问控制、管理特权（用户权限）以及生成所有的安全审计信息。 </p>
+    <h3>答案：</h3>
+    <p class="answer">SRM</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title">安全标识符（SID）的一般格式为：S-R-X-Y1-Y2…Yn-1-Yn。其中____是用来标识域内特定的账户和组的</p>
+    <h3>答案：</h3>
+    <p class="answer">Yn</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title">__创建可用的桌面；向操作系统注册一个安全维护序列；维护工作站状态；实现超时处理。</p>
+    <h3>答案：</h3>
+    <p class="answer">Winlogon</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title">Windows XP默认保存__散列值</p>
+    <h3>答案：</h3>
+    <p class="answer">LM和NTLM</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title">Windows Vista/7/8默认保存__散列值</p>
+    <h3>答案：</h3>
+    <p class="answer"> NTLM</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title">Kerberos协议是一个基于票据的系统，其中密钥发行中心（Key Distribution Center，KDC）的身份验证服务发行___），而票据授予服务发行___。</p>
+    <h3>答案：</h3>
+    <p class="answer">TGT、ST</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title"> 当服务接受一个客户的访问请求时，它创建一个线程来完成这项工作并将客户的访问令牌与工作线程相关联。客户的访问令牌是一个__</p>
+    <h3>答案：</h3>
+    <p class="answer">模拟令牌</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title">管理员直接运行软件，完整性级别为 </p>
+    <h3>答案：</h3>
+    <p class="answer">中</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title">管理员经UAC提权后运行，完整性级别为</p>
+    <h3>答案：</h3>
+    <p class="answer">高</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title">低级别进程无法向高级别进程的窗口发送消息，低级别的进程不可以读取高级别的内存地址空间</p>
+    <h3>答案：</h3>
+    <p class="answer"> UIPI</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title">文件虚拟化路径，Windows自带记事本程序旧版将文件写入哪个目录下会“重定向”：</p>
+    <h3>答案：</h3>
+    <p class="answer">C:\ProgramFiles</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title">课程ftp，可上传、看目录、不能下载和删除，允许权限：</p>
+    <h3>答案：</h3>
+    <p class="answer">列出文件夹目录，写入</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title">___通过将Windows的安装分区进行整卷加密，防止被攻击者通过启动其操作系统来获取文件的“ 脱 机 攻 击 ”。</p>
+    <h3>答案：</h3>
+    <p class="answer"> Bitlocker</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title">运行在内核模式的有</p>
+    <h3>答案：</h3>
+    <p class="answer"> 设备驱动程序、硬件抽象层</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title">HKLM存储与系统相关的设置。</p>
+    <h3>答案：</h3>
+    <p class="answer">HKLM（HKEY_LOCAL_MACHINE）是注册表的一个主要根键，用于存储与系统相关的设置和配置信息。它包含了操作系统、硬件驱动程序和系统服务等的配置数据。</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title">注册表的存储方式</p>
+    <h3>答案：</h3>
+    <p class="answer">注册表的结构类似文件目录，但其实是以磁盘上的Hive文件进行存储的。</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title"> 服务程序的配置数据</p>
+    <h3>答案：</h3>
+    <p class="answer"> 服务程序的配置数据位于“HKLM\System\CurrentControlSet\Services”。服务程序的配置数据存储在注册表中的特定位置，即"HKLM\System\CurrentControlSet\Services"。这个位置包含了操作系统中所有安装的服务的配置信息，包括服务的名称、启动类型、依赖关系等。</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title">木马的正确自启动方式</p>
+    <h3>答案：</h3>
+    <p class="answer">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run这个注册表路径下的项可以配置在系统启动时自动运行的程序。当在该路径下创建一个新的字符串值，并将其值设置为要运行的程序的路径，系统在启动时会自动执行该程序。、HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer\Run这个注册表路径下的项也可以配置在系统启动时自动运行的程序。它实际上是一种策略设置，可以通过组策略或注册表编辑器来修改。在该路径下创建一个新的字符串值，并将其值设置为要运行的程序的路径，系统在启动时会自动执行该程序。</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title">每个服务程序都有自己的SID</p>
+    <h3>答案：</h3>
+    <p class="answer">对的</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title"> 当用户以交互方式登录到一个域中时，Windows使用__作为认证包；当用
+户以交互方式登录到本地计算机上时，或者登录到Windows2000以前的可信域中
+时，或者当没有域控制器可以访问时，Windows使用__作为认证包。</p>
+    <h3>答案：</h3>
+    <p class="answer"> Kerberos、MSV1_0</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title">SAM数据库 </p>
+    <h3>答案：</h3>
+    <p class="answer">系统运行期间被SYSTEM帐号 锁定，即使是Administrator帐号也无法打开。Windows NT 6.x 默认都不再保存LM散列的安全策略。使用Syskey指定解密SAM所需的密码，这样每次启动系统时需要输入密码。默认设置在本机上保存启动密 钥，易破解。</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title">LM 和NTLM认证协议基</p>
+    <h3>答案：</h3>
+    <p class="answer">“Challenge/Response”模式的验证协议，仅提供单向验证。Kerberos协议基于公私钥加密体制，为分布式环境提供双向验证。</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title">安全访问令牌和客体安全描述内的有哪些信息。</p>
+    <h3>答案：</h3>
+    <p class="answer">1</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title">受限令牌中管理员SID可以被标志为restricted、UAC权限提升对话框的颜色。
+应用程序请求管理员权限 </p>
+    <h3>答案：</h3>
+    <p class="answer">1</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title">审核策略的类型</p>
+    <h3>答案：</h3>
+    <p class="answer">1</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title">Administrators组的成员可以取得某个文件或者文件夹的所有权，而不管该文件或者文件夹的权限如何 </p>
+    <h3>答案：</h3>
+    <p class="answer">1</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title">Smss.exe</p>
+    <h3>答案：</h3>
+    <p class="answer"> 会话管理器，系统启动时第一个运行的进程</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title"> Csrss.exe</p>
+    <h3>答案：</h3>
+    <p class="answer"> windows子系统进程，即客户端/服务器运行进程</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title"> Winlogon.exe</p>
+    <h3>答案：</h3>
+    <p class="answer"> 处理交互式登录</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title"> Services.exe</p>
+    <h3>答案：</h3>
+    <p class="answer"> 服务控制管理器，负责启动、停止、暂停和恢复服务</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title"> Svchost.exe</p>
+    <h3>答案：</h3>
+    <p class="answer"> 共享进程服务的宿主进程</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title"> windows的启动目录的自启动</p>
+    <h3>答案：</h3>
+    <p class="answer"> %ProgramData%\Microsoft\Windows\Start\Menu\Programs\Startup</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title"> 禁用Windows内存保护机制</p>
+    <h3>答案：</h3>
+    <p class="answer">1.更改注册表，但需要重启 2.修改控制寄存器CR0，将WP位设置为0 3.利用内存描述符表来描述一块可写内存</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title"> SSDT Hook技术总结</p>
+    <h3>答案：</h3>
+    <p class="answer"> 1.突破SSDT的内存保护 2.实现自己的NewZwQuerySystemInformation函数，过滤掉包含特定字符串的进程名3.交换ZwQuerySystemInformation与我们自己的New *函数</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title"> Inline Hook内联挂钩技术</p>
+    <h3>答案：</h3>
+    <p class="answer"> 又被称为Detour技术，运行时补丁技术</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title"> Dkom</p>
+    <h3>答案：</h3>
+    <p class="answer"> 直接内核对象操纵</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title"> 文件访问控制</p>
+    <h3>答案：</h3>
+    <p class="answer"> NTFS文件访问权限、共享文件访问权限</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title"> 文件加密</p>
+    <h3>答案：</h3>
+    <p class="answer"> EFS文件加密系统、Bitlocker磁盘加密</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title"> 文件数据加密</p>
+    <h3>答案：</h3>
+    <p class="answer"> EFS文件加密系统、Bitlocker磁盘加密</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+<div class="question">
+    <p class="title"> 第三方文件加密软件</p>
+    <h3>答案：</h3>
+    <p class="answer"> PGP、TrueCrypt/VeraCrypt</p>
+    <div class="toggle" onclick="toggleAnswer(this)">点击显示/隐藏答案</div>
+</div>
+
+
+</body>
+</html>
